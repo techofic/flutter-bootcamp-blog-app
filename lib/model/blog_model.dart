@@ -5,6 +5,7 @@ class BlogModel {
     this.subtitle,
     this.image,
     this.description,
+    this.isFavorite,
     this.createdAt,
     this.updatedAt,
   });
@@ -14,6 +15,8 @@ class BlogModel {
   String? subtitle;
   String? image;
   String? description;
+  int? isFavorite;
+
   dynamic createdAt;
   dynamic updatedAt;
 
@@ -23,6 +26,7 @@ class BlogModel {
         subtitle: json["subtitle"],
         image: json["image"],
         description: json["description"],
+        isFavorite: json["is_favorite"],
         createdAt: json["created_at"],
         updatedAt: json["updated_at"],
       );
@@ -33,6 +37,7 @@ class BlogModel {
         "subtitle": subtitle,
         "image": image,
         "description": description,
+        "is_favorite": isFavorite,
         "created_at": createdAt,
         "updated_at": updatedAt,
       };
